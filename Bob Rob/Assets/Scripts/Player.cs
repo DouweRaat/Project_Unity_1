@@ -43,6 +43,7 @@ public class Player : MonoBehaviour {
         {
             case PlayerState.RUNNING:
                 animator.SetBool("Jumping", false);
+                checkIfGrounded();
                 Jump();
                 break;
             case PlayerState.JUMPING:
@@ -66,6 +67,10 @@ public class Player : MonoBehaviour {
         if (IsGrounded())
         {
             playerState = PlayerState.RUNNING;
+        }
+        else
+        {
+            playerState = PlayerState.JUMPING;
         }
     }
 

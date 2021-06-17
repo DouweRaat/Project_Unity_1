@@ -16,7 +16,7 @@ public class AgentBullet : MonoBehaviour
 
     void FixedUpdate()
     {
-        rigidbody2d.velocity = Vector2.left * speed + Vector2.left * 10 * gameController.gameSpeed;
+        rigidbody2d.velocity = Vector2.left * speed + Vector2.left * 20 * gameController.gameSpeed;
         if (transform.position.x < -12)
         {
             Destroy(gameObject);
